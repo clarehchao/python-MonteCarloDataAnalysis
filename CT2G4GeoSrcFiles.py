@@ -11,7 +11,7 @@ if __name__ == '__main__':
     ftype = 'uint8'
     organname = ['Lungs','Adrenal','Brain','Heart','Liver','SalivaryGlands','Spleen','Bladder']
 
-    """
+
     # ==== CT image Segmentation via Threshold and manual VOIs ======
     # make a binary out of the dicom images
     
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     segfname = '{}/GeoVol.bin'.format(fbindir)
     xv.SaveFlattenVol(segvol2,segfname,'uint8')
     
-    """
+    
     # ========= Write G4-friendly geometry and source map files ==========
     fwgeodir = '/data3/G4data_Clare/G4INPUT/GeometryIM/G4IM/MIBGPT1_segCT'
     fwsrcdir = '/data3/G4data_Clare/G4INPUT/SourceMap/MIBGPT1_segCT'

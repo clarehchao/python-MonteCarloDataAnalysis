@@ -129,8 +129,7 @@ def Fname2Data(fname,simfdir):
 if __name__ == '__main__':
     #inputdata = open(sys.argv[1])
     fdir = '/home/clare/pythoncode/VHDMSD/SVdata'
-    
-    """
+
     # import the OLINDA & MCNPX data into DB
     tag = ['UFH00F/Svalue_I131_OLINDA_MassAdjusted_newborn.txt','UFH00F/Svalue_I131_MCNPX_ufh00f.txt','UFH10F/Svalue_I131_OLINDA_MassAdjusted_10yr.txt']
     simpkgs = ['OLINDA1.1','MCNPX','OLINDA1.1']
@@ -144,11 +143,9 @@ if __name__ == '__main__':
         df = ReadFile2DF(fname,True)
         varargs = [simpkgs[i],geo_ids[i],src_particles[i],ReadDBSize(con)]
         Insert2DB(con,df,varargs)
-    """
     
     # import the G4 data into DB
     simfdir = '/data4/G4.9.6.p02work_Clare/VoxelizedHumanDoseMultiSDv1-build/data'
-    con = mdb.connect('localhost','testuser','test000','UCSFDoseDB')
     thedir = '{}/Svalue_Updated/SVstats*'.format(fdir)
     allfiles = gb.glob(thedir)
     for fname in allfiles:
